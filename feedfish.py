@@ -11,7 +11,7 @@ GPIO.setup(23, GPIO.OUT)#物理引脚16对应的BCM编码为23
 
 
 
-def job():
+def fish():
     print('干活时间到:', time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time())))
     print("开始喂鱼")  
     pwm1 = GPIO.PWM(motor1, 50)
@@ -40,10 +40,10 @@ if __name__ == '__main__':
     # 采用非阻塞的方式
 
     # 采用date的方式，在特定时间里执行一次
-    #scheduler.add_job(job, 'date', run_date='2021-08-10 02:03:00')
+    #scheduler.add_fish(fish, 'date', run_date='2021-08-10 02:03:00')
     
     #采用interval的方式，每隔多长时间执行一次
-    scheduler.add_job(job, 'interval', seconds=10)
+    scheduler.add_job(fish, 'interval', seconds=10)
 
     # 采用cron的方式，固定时间循环:hour = '+时'，minute = ‘+分’ ，cecond = ‘+秒
     #scheduler.add_job(job, 'cron', second = '00')
