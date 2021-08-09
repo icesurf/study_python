@@ -10,12 +10,12 @@ if __name__ == '__main__':
     # 采用非阻塞的方式
 
     # 采用date的方式，在特定时间里执行一次
-    scheduler.add_job(job, 'date', run_date='2018-09-21 15:53:00')
+    scheduler.add_job(job, 'date', run_date='2021-08-10 00:53:00')
     # 这是一个独立的线程
     scheduler.start()
 
     # 其他任务是独立的线程
-    while True:
-        print('main-start:', time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time())))
-        time.sleep(2)
-        print('main-end:', time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time())))
+    #while True:
+     #   print('main-start:', time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time())))
+      #  time.sleep(2)
+       # print('main-end:', time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time())))
