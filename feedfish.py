@@ -43,9 +43,9 @@ if __name__ == '__main__':
     #scheduler.add_fish(fish, 'date', run_date='2021-08-10 02:03:00')
     
     #采用interval的方式，每隔多长时间执行一次
-    scheduler.add_job(fish, 'interval', seconds=10)
+    #scheduler.add_job(fish, 'interval', seconds=10)
 
     # 采用cron的方式，固定时间循环:hour = '+时'，minute = ‘+分’ ，cecond = ‘+秒
-    #scheduler.add_job(job, 'cron', second = '00')
+    scheduler.add_job(fish, 'cron', second = '00')
     # 这是一个独立的线程
     scheduler.start()
